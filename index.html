@@ -2,65 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>STARS@SLU Program</title>
+    <title>STARS@SLU Program - Application</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Highlight active nav link based on hash
-        function setActiveNav(hash) {
-            document.querySelectorAll('nav a').forEach(link => {
-                if (link.getAttribute('href') === hash) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-
-        // Scroll to section based on hash
-        function scrollToSection(hash) {
-            const id = hash.replace('#', '');
-            const section = document.getElementById(id);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-                setActiveNav(hash);
-            }
-        }
-
-        window.onload = function() {
-            // Initial highlight
-            let hash = window.location.hash || '#application';
-            setActiveNav(hash);
-            if (hash !== '#application') {
-                scrollToSection(hash);
-            }
-
-            // Add click events for nav links
-            document.querySelectorAll('nav a').forEach(link => {
-                link.onclick = function(e) {
-                    e.preventDefault();
-                    const hash = this.getAttribute('href');
-                    history.pushState(null, null, hash);
-                    scrollToSection(hash);
-                }
-            });
-
-            // Handle browser back/forward
-            window.onhashchange = function() {
-                setActiveNav(window.location.hash);
-                scrollToSection(window.location.hash);
-            };
-        };
-    </script>
 </head>
 <body>
     <header>
         <h1>STARS@SLU Program</h1>
-           <nav>
+        <nav>
             <a href="about.html">About STARS@SLU</a>
-            <a href="index.html">Application</a>
+            <a href="index.html" class="active">Application</a>
             <a href="contact.html">Contact Us</a>
-            <a href="past.html" class="active">Past Instances</a>
+            <a href="past.html">Past Instances</a>
         </nav>
     </header>
     <main>
