@@ -1,7 +1,7 @@
 body { 
     font-family: Arial, sans-serif; 
     margin: 0; 
-    background: #002366; 
+    background: #f7f9fa; 
     color: #222;
 }
 header {
@@ -23,7 +23,7 @@ nav a {
     transition: background 0.2s;
 }
 nav a:hover, nav a.active {
-    background: #0e4677;
+    background: #002366;
 }
 main {
     max-width: 900px;
@@ -55,7 +55,7 @@ form input, form textarea {
     font-size: 1rem;
 }
 form button {
-    background: #0047ab;
+    background: #002366;
     color: #fff;
     padding: 0.7rem 2rem;
     border: none;
