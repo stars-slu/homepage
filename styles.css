@@ -5,13 +5,13 @@ body {
     color: #222;
 }
 header {
-    background: #0e4677;
+    background: #002366;
     color: #fff;
     padding: 1.5rem 0;
     text-align: center;
 }
 nav {
-    background: #0047ab;
+    background: #002366;
     display: flex;
     justify-content: center;
 }
