@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STARS@SLU Program</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Highlight active nav link based on hash
+        function setActiveNav(hash) {
+            document.querySelectorAll('nav a').forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+
+        // Scroll to section based on hash
+        function scrollToSection(hash) {
+            const id = hash.replace('#', '');
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                setActiveNav(hash);
+            }
+        }
+
+        window.onload = function() {
+            // Initial highlight
+            let hash = window.location.hash || '#application';
+            setActiveNav(hash);
+            if (hash !== '#application') {
+                scrollToSection(hash);
+            }
+
+            // Add click events for nav links
+            document.querySelectorAll('nav a').forEach(link => {
+                link.onclick = function(e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href');
+                    history.pushState(null, null, hash);
+                    scrollToSection(hash);
+                }
+            });
+
+            // Handle browser back/forward
+            window.onhashchange = function() {
+                setActiveNav(window.location.hash);
+                scrollToSection(window.location.hash);
+            };
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>STARS@SLU Program</h1>
+        <nav>
+            <a href="#application">Application</a>
+            <a href="#about">About STARS@SLU</a>
+            <a href="#contact">Contact Us</a>
+            <a href="#past">Past Instances</a>
+        </nav>
+    </header>
+    <main>
+        <section id="application">
+            <h2>Application</h2>
+            <p>Interested in joining STARS@SLU? Please fill out the application form below:</p>
+            <form>
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text" required>
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" required>
+                <label for="motivation">Why do you want to join STARS@SLU?</label>
+                <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+        <section id="about">
+            <h2>About STARS@SLU</h2>
+            <p>
+                STARS@SLU (Summer Training and Research Scholars at Saint Louis University) is a program designed to provide undergraduates with hands-on research experience in science, technology, engineering, and mathematics (STEM) fields. 
+                <br><br>
+                Participants work alongside faculty mentors on original research projects, attend seminars, and present their results at the end of the program. STARS@SLU aims to foster curiosity, innovation, and academic excellence.
+            </p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>
+                For questions or further information, please email us at <a href="mailto:stars@slu.edu">stars@slu.edu</a>.
+            </p>
+            <form>
+                <label for="contact-name">Your Name</label>
+                <input id="contact-name" name="contact-name" type="text" required>
+                <label for="contact-email">Your Email</label>
+                <input id="contact-email" name="contact-email" type="email" required>
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+        <section id="past">
+            <h2>Past Instances</h2>
+            <ul>
+                <li><strong>2024:</strong> 18 students participated, presenting 9 research projects in biology, chemistry, and computer science.</li>
+                <li><strong>2023:</strong> 16 students, projects included data science, biochemistry, and engineering topics.</li>
+                <li><strong>2022:</strong> 14 students, research in physics, environmental science, and mathematics.</li>
+            </ul>
+            <p>
+                <a href="#">View detailed reports and presentations from previous years &rarr;</a>
+            </p>
+        </section>
+        <section id="sponsor-thanks" class="sponsor-thanks">
+            <div class="sponsor-thanks-container">
+                <img src="sponsor_logo.png" alt="Sponsor Logo" class="sponsor-logo">
+                <div class="thanks-note">
+                    <p><strong>Thank you to our generous sponsor for supporting the STARS@SLU Program!</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 STARS@SLU &mdash; Saint Louis University
+    </footer>
+</body>
+</html>
