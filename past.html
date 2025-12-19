@@ -1,313 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>STARS@SLU Program - Current Cohort</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    /* Carousel styles - small and self-contained */
-    .carousel {
-      max-width: 900px;
-      margin: 1.5rem auto;
-      position: relative;
-      overflow: hidden;
-      border-radius: 6px;
-      background: #111; /* kept as frame color */
-      color: #fff;
-    }
-    .carousel .slides {
-      display: flex;
-      transition: transform 0.5s ease;
-      will-change: transform;
-      align-items: stretch; /* ensure slides stretch to same height */
-    }
-    .carousel .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      text-align: center;
-      position: relative;
-
-      /* Enforce a consistent aspect ratio for slides */
-      aspect-ratio: 16 / 9;    /* change to 4/3 or 3/2 if you prefer */
-      /* Fallback for browsers that don't support aspect-ratio */
-      height: 450px;
-      overflow: hidden;
-
-      /* background used if image fails to load (or if using object-fit:contain) */
-      background: #f3f3f3;
-    }
-    .carousel .slide img {
-      /* Make the image fully cover the slide area (cropping if needed) */
-      width: 100%;
-      height: 100%;
-      object-fit: cover;         /* <-- prevents gaps by filling & cropping */
-      object-position: center;   /* center the focal point */
-      display: block;
-    }
-    /* Caption */
-    .carousel .caption {
-      position: absolute;
-      left: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      background: rgba(0,0,0,0.45);
-      padding: 0.6rem 0.8rem;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      color: #fff;
-    }
-
-    /* Prev/Next buttons */
-    .carousel .btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.45);
-      color: #fff;
-      border: none;
-      padding: 0.6rem 0.8rem;
-      cursor: pointer;
-      border-radius: 4px;
-      font-size: 1.1rem;
-    }
-    .carousel .prev { left: 10px; }
-    .carousel .next { right: 10px; }
-
-    /* Dots */
-    .carousel .dots {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 8px;
-      display: flex;
-      gap: 6px;
-    }
-    .carousel .dot {
-      width: 10px;
-      height: 10px;
-      background: rgba(255,255,255,0.4);
-      border-radius: 50%;
-      cursor: pointer;
-      border: none;
-      padding: 0;
-    }
-    .carousel .dot.active {
-      background: #fff;
-    }
-
-    /* Small screens */
-    @media (max-width: 600px) {
-      .carousel .caption { font-size: 0.85rem; bottom: 0.6rem; left: 0.6rem; right: 0.6rem; }
-      .carousel .btn { padding: 0.4rem 0.6rem; font-size: 1rem; }
-
-      /* Slightly taller/fatter aspect ratio on small screens */
-      .carousel .slide { aspect-ratio: 4 / 3; height: 300px; }
-    }
-    </style>
+  <meta charset="utf-8">
+  <title>STARS@SLU — Past Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <h1>STARS@SLU Program</h1>
-               <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About STARS@SLU</a>
-            <a href="index.html">Application</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="past.html" class="active">Current Cohort</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>2025 Cohort</h2>
-            We had 12 students participating in STARS@SLU 2025. Students worked on data science research projects.
-             <ul>
-                <li><a href="docs/Schedule.pdf" target="_blank">Schedule (PDF)</a></li>
-            </ul>
+  <header>
+    <h1>STARS@SLU Program — Past Events</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About STARS@SLU</a>
+      <a href="../index.html">Application</a>
+      <a href="../contact.html">Contact Us</a>
+      <a href="index.html" class="active">Past Events</a>
+    </nav>
+  </header>
 
-         <!-- PHOTO CAROUSEL (new) -->
-         <h3>Photos from the 2025 Program</h3>
+  <main>
+    <section>
+      <h2>Past Events</h2>
+      <p>Explore previous STARS@SLU cohorts and event highlights:</p>
+      <ul>
+        <li><a href="2025-cohort.html">2025 Cohort — projects, posters, and photos</a></li>
+        <!-- add more past event links here as new pages -->
+      </ul>
+      <p>2026 STARS@SLU applications will be open in March.</p>
+    </section>
 
-         <div class="carousel" id="photoCarousel" aria-roledescription="carousel">
-           <div class="slides">
-             <div class="slide" role="group" aria-label="Slide 1 of 8">
-               <img src="images/2025-Poster3.jpeg" alt="Students presenting at the poster session">
-               <div class="caption">Poster session — students present their final projects</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 1 of 8">
-               <img src="images/2025-Poster2.jpeg" alt="Students presenting at the poster session">
-               <div class="caption">Poster session — students present their final projects</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 3 of 8">
-               <img src="images/2025-Rworkshop9.jpeg" alt="Instructor giving a lecture">
-               <div class="caption">R Workshop - Introducing the basics of R</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 4 of 8">
-               <img src="images/2025-Rworkshop1.jpeg" alt="Students practicing with R under the guidance of the mentors">
-               <div class="caption">R Workshop - students practicing with R under the guidance of the mentors</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 5 of 8">
-               <img src="images/2025-Rworkshop2.jpeg" alt="Students practicing with R under the guidance of the mentors">
-               <div class="caption">R Workshop</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 6 of 8">
-               <img src="images/2025-Rworkshop5.jpeg" alt="Students practicing with R under the guidance of the mentors">
-               <div class="caption">R Workshop- students exploring with data plotting in R</div>
-             </div>
-               <div class="slide" role="group" aria-label="Slide 2 of 8">
-               <img src="images/2025-GameSession1.jpeg" alt="Students playing Function Battleship">
-               <div class="caption">Game Session - students playing Function Battleship</div>
-             </div>
-               <div class="slide" role="group" aria-label="Slide 2 of 8">
-               <img src="images/2025-InvitedSpeakers1.jpeg" alt="Dr. Ander Beristain (Linguistics)">
-               <div class="caption">Invited Speakers Session - Dr. Ander Beristain (Linguistics)</div>
-             </div>
-               <div class="slide" role="group" aria-label="Slide 2 of 8">
-               <img src="images/2025-CareerPanel1.jpeg" alt="Panelists are answering students questions">
-               <div class="caption">Career Panel - panelists are answering students questions</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 7 of 8">
-               <img src="images/2025-Group1.jpeg" alt="2025 cohort with team">
-               <div class="caption">2025 cohort group photo with the team</div>
-             </div>
-             <div class="slide" role="group" aria-label="Slide 8 of 8">
-               <img src="images/2025-Group5.jpeg" alt="2025 cohort">
-               <div class="caption">2025 cohort group photo</div>
-             </div>
-           </div>
+    <section id="sponsor-thanks" class="sponsor-thanks">
+      <div class="sponsor-thanks-container">
+        <img src="../images/sponsor-logo.png" class="sponsor-logo" alt="Sponsor logo">
+        <div class="thanks-note">
+          <p>Support for STARS@SLU is provided by the <strong>Mathematical Association of America</strong> and the <strong>Tensor Foundation.</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-           <button class="btn prev" aria-label="Previous slide" id="prevBtn">&larr;</button>
-           <button class="btn next" aria-label="Next slide" id="nextBtn">&rarr;</button>
-
-           <div class="dots" id="carouselDots" aria-hidden="false"></div>
-         </div>
-         <!-- END CAROUSEL -->
-
-         <h3>Posters</h3>
-            <p>The STARS@SLU 2025 Program wrapped up with a poster session on Friday, August 8, 2025. Explore the 2025 cohort’s posters and learn about the projects they worked on over the program.</p>
-             <ul>
-            <li><a href="docs/Team Alina.pdf" target="_blank"> 
-                Analysing Fatal Car Crash Data in the US</a> 
-            <p> Raleigh Delf, Aditya Dubey, Karthik Krishnaswamy</p></li>
-    
-            <li><a href="docs/Team Ava.pdf" target="_blank"> 
-                Serial Killers: Murders, Motives, And Maps </a> 
-                <p> Umalbaneen Alasady, Zion Holloway, Shaniya Williams </p> </li>
-    
-            <li><a href="docs/Team Sasha.pdf" target="_blank"> 
-                The Effect of Music on Mental Health in College-Aged Students</a> 
-            <p>Prani Gangavarapu, Jesse Swanagan, Maya Vance</p></li>
-    
-            <li><a href="docs/Team Preet.pdf" target="_blank"> 
-                Tracking Mental Health Trends in Adults </a> 
-           <p> Meona Hou, Krisha Patel, Laylah Treadway</p></li>
-            </ul>
-
-            
-          <!--   <p> We invite everyone to attend the poster session, meet our students, and learn about the exciting projects 
-            they have been working on. </p>
-            <img src="docs/STARS@SLU Poster Session.png" width="400" height="520">
-            <ul>
-            <li><a href="docs/STARS@SLU Poster Session.pdf" target="_blank">Poster Session Flyer (PDF)</a></li>
-            </ul> --->
-            
-<div style="display:none;">
-  <!-- This content is hidden from the page -->
-   <p>
-<a href="#">View detailed reports and presentations from previous years &rarr;</a>
-    </p>
-</div>
-           
-        </section>
-        <section id="sponsor-thanks" class="sponsor-thanks">
-            <div class="sponsor-thanks-container">
-                <img src="images/sponsor-logo.png" class="sponsor-logo" alt="Sponsor logo">
-                <div class="thanks-note">
-                    <p> Support for STARS@SLU is provided by the <strong>Mathematical Association of America</strong> and the <strong>Tensor Foundation.</strong></p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        &copy; 2025 STARS@SLU
-    </footer>
-
-    <script>
-    // Simple carousel script
-    (function(){
-      const carousel = document.getElementById('photoCarousel');
-      if (!carousel) return;
-      const slidesEl = carousel.querySelector('.slides');
-      const slides = Array.from(carousel.querySelectorAll('.slide'));
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const dotsContainer = document.getElementById('carouselDots');
-
-      let current = 0;
-      let autoPlayInterval = 4000;
-      let timer = null;
-      const slideCount = slides.length;
-
-      // Create dots
-      slides.forEach((_, i) => {
-        const d = document.createElement('button');
-        d.className = 'dot';
-        d.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        d.addEventListener('click', () => goTo(i));
-        dotsContainer.appendChild(d);
-      });
-
-      const dots = Array.from(dotsContainer.querySelectorAll('.dot'));
-
-      function update() {
-        slidesEl.style.transform = 'translateX(' + (-100 * current) + '%)';
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === current));
-      }
-
-      function prev() { goTo((current - 1 + slideCount) % slideCount); }
-      function next() { goTo((current + 1) % slideCount); }
-
-      function goTo(n) {
-        current = n;
-        update();
-        resetTimer();
-      }
-
-      prevBtn.addEventListener('click', prev);
-      nextBtn.addEventListener('click', next);
-
-      // Auto-play
-      function startTimer() {
-        timer = setInterval(next, autoPlayInterval);
-      }
-      function stopTimer() {
-        clearInterval(timer);
-        timer = null;
-      }
-      function resetTimer() {
-        stopTimer();
-        startTimer();
-      }
-
-      // Pause on hover
-      carousel.addEventListener('mouseenter', stopTimer);
-      carousel.addEventListener('mouseleave', startTimer);
-
-      // Keyboard navigation
-      carousel.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') prev();
-        if (e.key === 'ArrowRight') next();
-      });
-
-      // Initialize
-      update();
-      // Make carousel focusable for keyboard controls
-      carousel.tabIndex = 0;
-      startTimer();
-
-      // Accessibility: announce slide changes via ARIA live if needed (optional)
-    })();
-    </script>
+  <footer>&copy; 2025 STARS@SLU</footer>
 </body>
 </html>
