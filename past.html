@@ -13,23 +13,36 @@
       position: relative;
       overflow: hidden;
       border-radius: 6px;
-      background: #111;
+      background: #111; /* kept as frame color */
       color: #fff;
     }
     .carousel .slides {
       display: flex;
       transition: transform 0.5s ease;
       will-change: transform;
+      align-items: stretch; /* ensure slides stretch to same height */
     }
     .carousel .slide {
       min-width: 100%;
       box-sizing: border-box;
       text-align: center;
       position: relative;
+
+      /* Enforce a consistent aspect ratio for slides */
+      aspect-ratio: 16 / 9;    /* change to 4/3 or 3/2 if you prefer */
+      /* Fallback for browsers that don't support aspect-ratio */
+      height: 450px;
+      overflow: hidden;
+
+      /* background used if image fails to load (or if using object-fit:contain) */
+      background: #f3f3f3;
     }
     .carousel .slide img {
+      /* Make the image fully cover the slide area (cropping if needed) */
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;         /* <-- prevents gaps by filling & cropping */
+      object-position: center;   /* center the focal point */
       display: block;
     }
     /* Caption */
@@ -42,6 +55,7 @@
       padding: 0.6rem 0.8rem;
       border-radius: 4px;
       font-size: 0.95rem;
+      color: #fff;
     }
 
     /* Prev/Next buttons */
@@ -75,6 +89,8 @@
       background: rgba(255,255,255,0.4);
       border-radius: 50%;
       cursor: pointer;
+      border: none;
+      padding: 0;
     }
     .carousel .dot.active {
       background: #fff;
@@ -84,6 +100,9 @@
     @media (max-width: 600px) {
       .carousel .caption { font-size: 0.85rem; bottom: 0.6rem; left: 0.6rem; right: 0.6rem; }
       .carousel .btn { padding: 0.4rem 0.6rem; font-size: 1rem; }
+
+      /* Slightly taller/fatter aspect ratio on small screens */
+      .carousel .slide { aspect-ratio: 4 / 3; height: 300px; }
     }
     </style>
 </head>
@@ -111,35 +130,35 @@
 
          <div class="carousel" id="photoCarousel" aria-roledescription="carousel">
            <div class="slides">
-             <div class="slide" role="group" aria-label="Slide 1 of 4">
+             <div class="slide" role="group" aria-label="Slide 1 of 8">
                <img src="images/2025-Poster3.jpeg" alt="Students presenting at the poster session">
                <div class="caption">Poster session — students present their final projects</div>
              </div>
-             <div class="slide" role="group" aria-label="Slide 2 of 4">
+             <div class="slide" role="group" aria-label="Slide 2 of 8">
                <img src="images/2025-GameSession1.jpeg" alt="Playing Function Battleship">
                <div class="caption">Game Session</div>
              </div>
-             <div class="slide" role="group" aria-label="Slide 3 of 4">
+             <div class="slide" role="group" aria-label="Slide 3 of 8">
                <img src="images/2025-Rworkshop9.jpeg" alt="Instructor giving a lecture">
                <div class="caption">R Workshop</div>
              </div>
-               <div class="slide" role="group" aria-label="Slide 3 of 4">
+             <div class="slide" role="group" aria-label="Slide 4 of 8">
                <img src="images/2025-Rworkshop1.jpeg" alt="Students practicing with R under the guidance of the mentors">
                <div class="caption">R Workshop</div>
              </div>
-               <div class="slide" role="group" aria-label="Slide 3 of 4">
+             <div class="slide" role="group" aria-label="Slide 5 of 8">
                <img src="images/2025-Rworkshop2.jpeg" alt="Students practicing with R under the guidance of the mentors">
                <div class="caption">R Workshop</div>
              </div>
-               <div class="slide" role="group" aria-label="Slide 3 of 4">
+             <div class="slide" role="group" aria-label="Slide 6 of 8">
                <img src="images/2025-Rworkshop8.jpeg" alt="Students practicing with R under the guidance of the mentors">
                <div class="caption">R Workshop</div>
              </div>
-             <div class="slide" role="group" aria-label="Slide 4 of 4">
+             <div class="slide" role="group" aria-label="Slide 7 of 8">
                <img src="images/2025-Group1.jpeg" alt="2025 cohort with team">
                <div class="caption">2025 cohort group photo with the team</div>
              </div>
-               <div class="slide" role="group" aria-label="Slide 4 of 4">
+             <div class="slide" role="group" aria-label="Slide 8 of 8">
                <img src="images/2025-Group5.jpeg" alt="2025 cohort">
                <div class="caption">2025 cohort group photo</div>
              </div>
