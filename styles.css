@@ -167,7 +167,7 @@ figure { margin: 0; }
 /* Each flyer: take half the container minus gap (box-sizing included) */
 #flyers .flyer {
   box-sizing: border-box;
-  flex: 0 0 calc(50% - 0.5rem);
+  flex: 0 0 calc(45% - 0.5rem);
   padding: 0.5rem;
   background: #fff;
   border-radius: 6px;
