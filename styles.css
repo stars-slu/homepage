@@ -5,7 +5,7 @@
    - forms
    - sponsor section
    - flyers side-by-side layout
-   - framed testimonial card (testimonial + blockquote)
+   - framed testimonial card (quote + attribution, no avatar)
    =========================== */
 
 /* Global reset */
@@ -251,30 +251,21 @@ figure { margin: 0; }
   font-size: 1.03rem;
 }
 
-/* Footer area with avatar + metadata */
+/* Figcaption layout for testimonial WITHOUT avatar */
 .testimonial figcaption {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  justify-content: flex-end; /* attribution aligned to the right */
   padding: 0.75rem 1.25rem;
   background: rgba(0, 35, 102, 0.02);
   border-top: 1px solid rgba(0,0,0,0.03);
 }
 
-/* Avatar */
-.testimonial-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid rgba(0,35,102,0.08);
-  flex-shrink: 0;
-}
-
-/* Name & role */
+/* Name & role stacked and right-aligned */
 .testimonial-meta {
   display: flex;
   flex-direction: column;
+  text-align: right;
 }
 
 .testimonial-name {
@@ -287,23 +278,13 @@ figure { margin: 0; }
   color: #4a6ea9;
 }
 
-/* Optional: make the card narrower on very wide screens */
+/* Optional: make the testimonial card narrower on very wide screens */
 @media (min-width: 1100px) {
   .testimonial {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-/* Stack avatar above text on very small screens */
-@media (max-width: 420px) {
-  .testimonial figcaption {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  .testimonial-avatar { width: 48px; height: 48px; }
 }
 
 /* Fallback blockquote styling (if you use blockquote outside testimonial) */
@@ -338,6 +319,11 @@ blockquote p {
     margin-bottom: 1rem;
   }
   #flyers .flyer { padding: 0.5rem 0; }
+  /* Make testimonial attribution centered on small screens for better appearance */
+  .testimonial figcaption {
+    justify-content: center;
+  }
+  .testimonial-meta { text-align: center; }
 }
 
 /* Utility: visually-hidden (if needed for accessibility) */
