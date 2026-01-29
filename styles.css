@@ -178,9 +178,9 @@ figure { margin: 0; }
 /* Images scale to their flyer and cannot overflow */
 #flyers .flyer img {
   display: block;
-  width: 100%;
+  width: 95%;
   height: auto;
-  max-width: 100%;
+  max-width: 95%;
   object-fit: contain;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
