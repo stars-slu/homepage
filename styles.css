@@ -5,7 +5,7 @@
    - forms
    - sponsor section
    - flyers side-by-side layout
-   - framed testimonial card (quote + attribution, no avatar)
+   - framed testimonial card (quote + attribution; avatar hidden)
    =========================== */
 
 /* Global reset */
@@ -222,6 +222,7 @@ figure { margin: 0; }
 /* ===========================
    Testimonial / framed quote
    (use <figure class="testimonial"> with a <blockquote> and a <figcaption>)
+   Avatar elements are hidden so only quote + attribution show
    =========================== */
 
 .testimonial {
@@ -251,21 +252,27 @@ figure { margin: 0; }
   font-size: 1.03rem;
 }
 
-/* Figcaption layout for testimonial WITHOUT avatar */
+/* Hide avatar / fallback if present (removes circular photo frame) */
+.testimonial-avatar,
+.avatar-fallback {
+  display: none !important;
+}
+
+/* Figcaption layout for testimonial WITHOUT avatar: center attribution */
 .testimonial figcaption {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* attribution aligned to the right */
+  justify-content: center; /* center the attribution */
   padding: 0.75rem 1.25rem;
   background: rgba(0, 35, 102, 0.02);
   border-top: 1px solid rgba(0,0,0,0.03);
 }
 
-/* Name & role stacked and right-aligned */
+/* Name & role stacked and centered */
 .testimonial-meta {
   display: flex;
   flex-direction: column;
-  text-align: right;
+  text-align: center;
 }
 
 .testimonial-name {
@@ -319,10 +326,9 @@ blockquote p {
     margin-bottom: 1rem;
   }
   #flyers .flyer { padding: 0.5rem 0; }
-  /* Make testimonial attribution centered on small screens for better appearance */
-  .testimonial figcaption {
-    justify-content: center;
-  }
+
+  /* Keep testimonial attribution centered on small screens */
+  .testimonial figcaption { justify-content: center; }
   .testimonial-meta { text-align: center; }
 }
 
