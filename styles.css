@@ -140,57 +140,63 @@ footer {
 }
 
 /* -----------------------------
-   Flyers section (added)
+   Flyers section (robust)
    ----------------------------- */
+
+/* Remove default figure spacing */
+figure { margin: 0; }
+
+/* Container should fill available width inside main */
 #flyers {
   margin-top: 1.5rem;
+  width: 100%;
 }
 
-/* Layout: side-by-side on wider screens, stacked on small screens */
-.flyer-container {
+/* Flex layout: two across on wide screens, stack on small */
+#flyers .flyer-container {
   display: flex;
-  gap: 1rem;           /* spacing between flyers */
-  flex-wrap: wrap;     /* allow wrapping on small screens */
-  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: stretch;
   justify-content: center;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* Each flyer is a flexible column */
-.flyer {
-  flex: 1 1 320px;           /* grow/shrink, prefer at least 320px */
-  max-width: 460px;          /* keep flyers a reasonable size within main (main is 900px) */
-  margin: 0;
-  background: #fff;
+/* Each flyer: take half the container minus gap (box-sizing included) */
+#flyers .flyer {
+  box-sizing: border-box;
+  flex: 0 0 calc(50% - 0.5rem);
   padding: 0.5rem;
+  background: #fff;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin: 0;
 }
 
-/* Make images scale to the flyer container and not overflow */
-.flyer img {
+/* Images scale to their flyer and cannot overflow */
+#flyers .flyer img {
   display: block;
   width: 100%;
   height: auto;
   max-width: 100%;
-  max-height: 80vh;
   object-fit: contain;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
 
-/* Center and style the caption */
-.flyer figcaption {
+/* Caption styling */
+#flyers .flyer figcaption {
   margin-top: 0.5rem;
   font-size: 0.95rem;
   color: #444;
   text-align: center;
 }
 
-/* On larger screens force two flyers side by side */
-@media (min-width: 700px) {
-  .flyer {
-    flex: 0 0 calc(50% - 0.5rem);
+/* Stack on narrow viewports */
+@media (max-width: 720px) {
+  #flyers .flyer {
+    flex: 1 1 100%;
   }
 }
