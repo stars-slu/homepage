@@ -1,3 +1,13 @@
+/* ===========================
+   STARS@SLU — styles.css
+   Complete stylesheet including:
+   - layout (header, nav, main, footer)
+   - forms
+   - sponsor section
+   - flyers side-by-side layout
+   - framed testimonial card (testimonial + blockquote)
+   =========================== */
+
 /* Global reset */
 *,
 *::before,
@@ -6,7 +16,7 @@
 }
 
 /* Base page styles */
-body { 
+body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background: #f7f9fa;
@@ -144,9 +154,11 @@ footer {
 /* Remove default figure spacing globally to avoid unexpected gaps */
 figure { margin: 0; }
 
-/* -----------------------------
+/* ===========================
    Flyers section (robust)
-   ----------------------------- */
+   - Displays two flyers side-by-side on wide screens
+   - Stacks on small screens
+   =========================== */
 
 /* Ensure the #flyers area uses the full width inside main */
 #flyers {
@@ -207,41 +219,112 @@ figure { margin: 0; }
   }
 }
 
-/* -----------------------------
-   Blockquote styling
-   ----------------------------- */
+/* ===========================
+   Testimonial / framed quote
+   (use <figure class="testimonial"> with a <blockquote> and a <figcaption>)
+   =========================== */
 
-blockquote {
+.testimonial {
   margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
-  border-left: 4px solid #002366; /* accent color */
+  padding: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border: 1px solid rgba(0, 35, 102, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2,15,45,0.06);
+  overflow: hidden;
+}
+
+/* Block part of the card */
+.testimonial blockquote {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  border-left: none;
+  color: #111;
+  font-style: italic;
+  line-height: 1.6;
+  quotes: "“" "”" "‘" "’";
+}
+
+/* Slightly larger, emphasized quote text */
+.testimonial blockquote p {
+  margin: 0;
+  font-size: 1.03rem;
+}
+
+/* Footer area with avatar + metadata */
+.testimonial figcaption {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background: rgba(0, 35, 102, 0.02);
+  border-top: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Avatar */
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0,35,102,0.08);
+  flex-shrink: 0;
+}
+
+/* Name & role */
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  color: #002366;
+}
+
+.testimonial-role {
+  font-size: 0.92rem;
+  color: #4a6ea9;
+}
+
+/* Optional: make the card narrower on very wide screens */
+@media (min-width: 1100px) {
+  .testimonial {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Stack avatar above text on very small screens */
+@media (max-width: 420px) {
+  .testimonial figcaption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .testimonial-avatar { width: 48px; height: 48px; }
+}
+
+/* Fallback blockquote styling (if you use blockquote outside testimonial) */
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.9rem 1rem;
+  border-left: 4px solid #002366;
   background: #f1f6fb;
   border-radius: 6px;
-  color: #222;
 }
 
 blockquote p {
   margin: 0;
   font-style: italic;
   line-height: 1.5;
-  quotes: "“" "”" "‘" "’";
 }
 
-/* Use semantic footer/cite inside blockquote for attribution */
-blockquote footer {
-  margin-top: 0.6rem;
-  text-align: right;
-  font-size: 0.95rem;
-  color: #0047ab;
-}
+/* ===========================
+   Responsive / small-screen tweaks
+   =========================== */
 
-blockquote footer cite {
-  font-style: normal;
-  font-weight: 600;
-  color: #002366;
-}
-
-/* Small screens tweaks */
 @media (max-width: 600px) {
   nav { flex-direction: column; gap: 0; align-items: center; }
   main { padding: 1rem; margin: 1rem; }
@@ -263,5 +346,5 @@ blockquote footer cite {
   height: 1px; width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
 }
