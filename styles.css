@@ -109,3 +109,55 @@ footer {
         margin-bottom: 1rem;
     }
 }
+/* Flyers section — add to your existing styles.css */
+#flyers {
+  margin-top: 1.5rem;
+}
+
+/* Layout: side-by-side on wider screens, stacked on small screens */
+.flyer-container {
+  display: flex;
+  gap: 1rem;           /* spacing between flyers */
+  flex-wrap: wrap;     /* allow wrapping on small screens */
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each flyer is a flexible column */
+.flyer {
+  flex: 1 1 320px;           /* grow/shrink, prefer at least 320px */
+  max-width: 460px;          /* keep flyers a reasonable size within main (main is 900px) */
+  margin: 0;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Make images scale to the flyer container and not overflow */
+.flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+/* Center and style the caption */
+.flyer figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+}
+
+/* On larger screens force two flyers side by side */
+@media (min-width: 700px) {
+  .flyer {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+}
