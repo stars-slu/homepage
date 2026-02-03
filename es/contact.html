@@ -29,17 +29,28 @@
   <main>
     <section>
       <h2>Contáctanos</h2>
-      <p>Para preguntas sobre el programa, la aplicación o accesibilidad, contáctanos:</p>
-      <ul>
-        <li>Email: <a href="mailto:your-email@slu.edu">your-email@slu.edu</a></li>
-        <li>Teléfono: <strong>[número]</strong> (oficina)</li>
-      </ul>
-      <p>También puede visitar nuestras páginas del personal para más información sobre la dirección del programa.</p>
-    </section>
-  </main>
-
-  <footer>&copy; STARS@SLU</footer>
-
-  <script src="../lang-switch.js"></script>
+      <p>Para preguntas o más información, por favor escríbenos a ozlem.ugurlu@slu.edu o complete el formulario a continuación.</p>
+            <form>
+                <label for="contact-name">Nombre</label>
+                <input id="contact-name" name="contact-name" type="text" required>
+                <label for="contact-email">Correo electrónico</label>
+                <input id="contact-email" name="contact-email" type="email" required>
+                <label for="contact-message">Mensaje</label>
+                <textarea id="contact-message" name="contact-message" rows="4" required></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+        <section id="sponsor-thanks" class="sponsor-thanks">
+            <div class="sponsor-thanks-container">
+                <img src="images/sponsor-logo.png" class="sponsor-logo">
+                <div class="thanks-note">
+                    <p> Support for STARS@SLU is provided by the <strong>Mathematical Association of America</strong> and the <strong>Tensor Foundation.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; STARS@SLU
+    </footer>
 </body>
 </html>
