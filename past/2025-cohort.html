@@ -4,9 +4,11 @@
   <meta charset="utf-8">
   <title>STARS@SLU — 2025 Cohort</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/homepage/styles.css">
+  <link rel="alternate" hreflang="en" href="https://stars-slu.github.io/homepage/past/">
+  <link rel="alternate" hreflang="es" href="https://stars-slu.github.io/homepage/es/past/">
   <style>
-    /* Carousel styles */
+    /* Carousel styles (kept local to this page) */
     .carousel {
       max-width: 900px;
       margin: 1.5rem auto;
@@ -93,36 +95,43 @@
 <body>
   <header>
     <h1>STARS@SLU Program</h1>
+
+    <!-- Language switcher placeholder -->
+    <nav class="lang-switch" aria-label="Language switch">
+      <a class="lang-link" href="/homepage/" hreflang="en" title="English">English</a>
+      <a class="lang-link" href="/homepage/es/" hreflang="es" title="Español">Español</a>
+    </nav>
+
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="../index.html">Application</a>
-      <a href="../contact.html">Contact Us</a>
-      <a href="index.html" class="active">Past Cohorts</a>
+      <a href="/homepage/index.html">Home</a>
+      <a href="/homepage/application.html">Application</a>
+      <a href="/homepage/contact.html">Contact Us</a>
+      <a href="/homepage/past/index.html" class="active">Past Cohorts</a>
     </nav>
   </header>
 
   <main>
     <section>
       <h2>2025 Cohort</h2>
-      We had 12 students participating in STARS@SLU 2025. Students worked on data science research projects.
+      <p>We had 12 students participating in STARS@SLU 2025. Students worked on data science research projects.</p>
       <ul>
-        <li><a href="../docs/Schedule.pdf" target="_blank">Schedule (PDF)</a></li>
+        <li><a href="/homepage/docs/Schedule.pdf" target="_blank">Schedule (PDF)</a></li>
       </ul>
 
       <h3>Photos from the 2025 Program</h3>
       <div class="carousel" id="photoCarousel" aria-roledescription="carousel">
         <div class="slides">
-          <div class="slide"><img src="../images/2025-Poster3.jpeg" alt="Students presenting at the poster session"><div class="caption">Poster session — students present their final projects</div></div>
-          <div class="slide"><img src="../images/2025-Poster2.jpeg" alt="Students presenting at the poster session"><div class="caption">Poster session — students present their final projects</div></div>
-          <div class="slide"><img src="../images/2025-Rworkshop9.jpeg" alt="Instructor giving a lecture"><div class="caption">R Workshop - Introducing the basics of R</div></div>
-          <div class="slide"><img src="../images/2025-Rworkshop1.jpeg" alt="Students practicing with R"><div class="caption">R Workshop - students practicing with R</div></div>
-          <div class="slide"><img src="../images/2025-Rworkshop2.jpeg" alt="Students practicing with R"><div class="caption">R Workshop</div></div>
-          <div class="slide"><img src="../images/2025-Rworkshop5.jpeg" alt="Students exploring plotting in R"><div class="caption">R Workshop - data plotting in R</div></div>
-          <div class="slide"><img src="../images/2025-GameSession1.jpeg" alt="Students playing Function Battleship"><div class="caption">Game Session - Function Battleship</div></div>
-          <div class="slide"><img src="../images/2025-InvitedSpeakers1.jpeg" alt="Dr. Ander Beristain (Linguistics)"><div class="caption">Invited Speaker - Dr. Ander Beristain</div></div>
-          <div class="slide"><img src="../images/2025-CareerPanel1.jpeg" alt="Panelists answering questions"><div class="caption">Career Panel</div></div>
-          <div class="slide"><img src="../images/2025-Group1.jpeg" alt="2025 cohort with team"><div class="caption">2025 cohort group photo with the team</div></div>
-          <div class="slide"><img src="../images/2025-Group5.jpeg" alt="2025 cohort"><div class="caption">2025 cohort group photo</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Poster3.jpeg" alt="Students presenting at the poster session"><div class="caption">Poster session — students present their final projects</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Poster2.jpeg" alt="Students presenting at the poster session"><div class="caption">Poster session — students present their final projects</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Rworkshop9.jpeg" alt="Instructor giving a lecture"><div class="caption">R Workshop - Introducing the basics of R</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Rworkshop1.jpeg" alt="Students practicing with R"><div class="caption">R Workshop - students practicing with R</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Rworkshop2.jpeg" alt="Students practicing with R"><div class="caption">R Workshop</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Rworkshop5.jpeg" alt="Students exploring plotting in R"><div class="caption">R Workshop - data plotting in R</div></div>
+          <div class="slide"><img src="/homepage/images/2025-GameSession1.jpeg" alt="Students playing Function Battleship"><div class="caption">Game Session - Function Battleship</div></div>
+          <div class="slide"><img src="/homepage/images/2025-InvitedSpeakers1.jpeg" alt="Dr. Ander Beristain (Linguistics)"><div class="caption">Invited Speaker - Dr. Ander Beristain</div></div>
+          <div class="slide"><img src="/homepage/images/2025-CareerPanel1.jpeg" alt="Panelists answering questions"><div class="caption">Career Panel</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Group1.jpeg" alt="2025 cohort with team"><div class="caption">2025 cohort group photo with the team</div></div>
+          <div class="slide"><img src="/homepage/images/2025-Group5.jpeg" alt="2025 cohort"><div class="caption">2025 cohort group photo</div></div>
         </div>
 
         <button class="btn prev" aria-label="Previous slide" id="prevBtn">&larr;</button>
@@ -133,45 +142,43 @@
       <h3>Posters</h3>
       <p>The STARS@SLU 2025 Program wrapped up with a poster session on Friday, August 8, 2025. Explore the 2025 cohort’s posters and learn about the projects they worked on over the program.</p>
       <ul>
-        <li><a href="../docs/Team Alina.pdf" target="_blank">Analysing Fatal Car Crash Data in the US</a><p>Raleigh Delf, Aditya Dubey, Karthik Krishnaswamy</p></li>
-        <li><a href="../docs/Team Ava.pdf" target="_blank">Serial Killers: Murders, Motives, And Maps</a><p>Umalbaneen Alasady, Zion Holloway, Shaniya Williams</p></li>
-        <li><a href="../docs/Team Sasha.pdf" target="_blank">The Effect of Music on Mental Health in College-Aged Students</a><p>Prani Gangavarapu, Jesse Swanagan, Maya Vance</p></li>
-        <li><a href="../docs/Team Preet.pdf" target="_blank">Tracking Mental Health Trends in Adults</a><p>Meona Hou, Krisha Patel, Laylah Treadway</p></li>
+        <li><a href="/homepage/docs/Team Alina.pdf" target="_blank">Analysing Fatal Car Crash Data in the US</a><p>Raleigh Delf, Aditya Dubey, Karthik Krishnaswamy</p></li>
+        <li><a href="/homepage/docs/Team Ava.pdf" target="_blank">Serial Killers: Murders, Motives, And Maps</a><p>Umalbaneen Alasady, Zion Holloway, Shaniya Williams</p></li>
+        <li><a href="/homepage/docs/Team Sasha.pdf" target="_blank">The Effect of Music on Mental Health in College-Aged Students</a><p>Prani Gangavarapu, Jesse Swanagan, Maya Vance</p></li>
+        <li><a href="/homepage/docs/Team Preet.pdf" target="_blank">Tracking Mental Health Trends in Adults</a><p>Meona Hou, Krisha Patel, Laylah Treadway</p></li>
       </ul>
     </section>
 
-     <section>
-            <h2>Program Leadership </h2>
-        
-            <h4>Özlem Uğurlu, Director</h4>  
-            <p>  Assistant Professor, Department of Mathematics and Statistics, Saint Louis University</p>
-            <a href="https://ozlemugurlu.com/" target="_blank" rel="noopener noreferrer"> Personal Website </a>
+    <section>
+      <h2>Program Leadership</h2>
+      <h4>Özlem Uğurlu, Director</h4>
+      <p>Assistant Professor, Department of Mathematics and Statistics, Saint Louis University</p>
+      <a href="https://ozlemugurlu.com/" target="_blank" rel="noopener noreferrer">Personal Website</a>
 
-            <h4> Bryan Clair, Co-Director</h4>
-            <p>Associate Professor, Department of Mathematics and Statistics, Saint Louis University </p>
-            <a href="https://turtlegraphics.org/" target="_blank" rel="noopener noreferrer"> Personal Website </a>
-            
-            <h4> Cody Gilbert, Co-Director</h4>
-            <p>Assistant Professor, Department of Mathematics and Statistics, Saint Louis University </p>
-            <a href="https://sites.google.com/view/cody-gilbert/home?authuser=0" target="_blank" rel="noopener noreferrer"> Personal Website </a>
+      <h4>Bryan Clair, Co-Director</h4>
+      <p>Associate Professor, Department of Mathematics and Statistics, Saint Louis University</p>
+      <a href="https://turtlegraphics.org/" target="_blank" rel="noopener noreferrer">Personal Website</a>
 
-            <h4> Alina Abdurakhimova, Graduate Assistant</h4>
-            <p>Graduate Student, Department of Mathematics and Statistics, Saint Louis University </p>
+      <h4>Cody Gilbert, Co-Director</h4>
+      <p>Assistant Professor, Department of Mathematics and Statistics, Saint Louis University</p>
+      <a href="https://sites.google.com/view/cody-gilbert/home?authuser=0" target="_blank" rel="noopener noreferrer">Personal Website</a>
 
-            <h4> Preetinder Kaur, Undergraduate Assistant</h4>
-            <p>Undergraduate Student, Double Major in Mathematics and Computer Science, Saint Louis University </p>
+      <h4>Alina Abdurakhimova, Graduate Assistant</h4>
+      <p>Graduate Student, Department of Mathematics and Statistics, Saint Louis University</p>
 
-            <h4> Ava Robertson, Undergraduate Assistant</h4>
-            <p>Undergraduate Student, Major in Biomedical Engineering, Saint Louis University </p>
+      <h4>Preetinder Kaur, Undergraduate Assistant</h4>
+      <p>Undergraduate Student, Double Major in Mathematics and Computer Science, Saint Louis University</p>
 
-            <h4> Sasha Trejo-Arciles, Undergraduate Assistant</h4>
-            <p>Undergraduate Student, Double Major in Mathematics and Computer Science, Saint Louis University </p>
-                
-        </section>
+      <h4>Ava Robertson, Undergraduate Assistant</h4>
+      <p>Undergraduate Student, Major in Biomedical Engineering, Saint Louis University</p>
+
+      <h4>Sasha Trejo-Arciles, Undergraduate Assistant</h4>
+      <p>Undergraduate Student, Double Major in Mathematics and Computer Science, Saint Louis University</p>
+    </section>
 
     <section id="sponsor-thanks" class="sponsor-thanks">
       <div class="sponsor-thanks-container">
-        <img src="../images/sponsor-logo.png" class="sponsor-logo" alt="Sponsor logo">
+        <img src="/homepage/images/sponsor-logo.png" class="sponsor-logo" alt="Sponsor logo">
         <div class="thanks-note">
           <p>Support for STARS@SLU is provided by the <strong>Mathematical Association of America</strong> and the <strong>Tensor Foundation.</strong></p>
         </div>
@@ -249,5 +256,8 @@
       startTimer();
     })();
   </script>
+
+  <!-- central language script (absolute path so it works from / and /es/) -->
+  <script src="/homepage/lang-switch.js"></script>
 </body>
 </html>
