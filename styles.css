@@ -31,8 +31,52 @@ header {
   color: #fff;
   padding: 1.5rem 0;
   text-align: center;
+  position: relative; /* allow absolute-positioning the language switch */
+  overflow: visible;
 }
 
+header h1 {
+  margin: 0;
+  line-height: 1;
+}
+
+/* Language switcher (top-right on wide screens, centered stacked on small screens) */
+.lang-switch {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  z-index: 10;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  padding: .25rem .5rem;
+  border-radius: 4px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  font-weight: 600;
+  transition: background .12s ease, color .12s ease, transform .08s ease;
+  display: inline-block;
+}
+
+.lang-switch a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+.lang-switch a:focus {
+  outline: 3px solid rgba(255,255,255,0.16);
+  outline-offset: 2px;
+}
+
+.lang-switch a.active {
+  background: rgba(255,255,255,0.14);
+}
+
+/* Keep existing nav styles — these apply to the main navigation bar(s) */
 nav {
   background: #002366;
   display: flex;
@@ -330,6 +374,13 @@ blockquote p {
   /* Keep testimonial attribution centered on small screens */
   .testimonial figcaption { justify-content: center; }
   .testimonial-meta { text-align: center; }
+
+  /* Make the language switcher flow with content on small screens */
+  .lang-switch {
+    position: static;
+    margin: 0.5rem auto 0 auto;
+    justify-content: center;
+  }
 }
 
 /* Utility: visually-hidden (if needed for accessibility) */
