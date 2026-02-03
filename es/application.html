@@ -1,42 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>STARS@SLU - Solicitud</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>STARS@SLU — Solicitud</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="alternate" hreflang="es" href="https://stars-slu.github.io/homepage/es/application.html">
+  <link rel="alternate" hreflang="en" href="https://stars-slu.github.io/homepage/application.html">
 </head>
 <body>
-   <header>
-        <h1>STARS@SLU</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="application.html" class="active">Solicitud</a>
-            <a href="contact.html">Contáctanos</a>
-            <a href="past/">Cohortes anteriores</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Solicitud</h2>
-            <p>¡Gracias por considerar postularte a STARS@SLU!
-Por favor, completa el formulario de solicitud a continuación.
-</p>
-    <!-- Replace the src below with your actual Google Form embed link -->
-            <iframe src="https://forms.gle/P72irB3Qm3k1fNYe7"
-                width="640" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </section>
-        <section id="sponsor-thanks" class="sponsor-thanks">
-            <div class="sponsor-thanks-container">
-                <img src="images/sponsor-logo.png" alt="Sponsor Logo" class="sponsor-logo">
-                <div class="thanks-note">
-                    <p>Support for STARS@SLU is provided by the <strong>Mathematical Association of America</strong> and the <strong>Tensor Foundation.</strong></p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        &copy; STARS@SLU
-    </footer>
+  <header>
+    <h1>STARS@SLU</h1>
+
+    <!-- Language switcher placeholder -->
+    <nav class="lang-switch" aria-label="Language switch">
+      <a class="lang-link" href="/homepage/" hreflang="en" title="English">English</a>
+      <a class="lang-link" href="/homepage/es/" hreflang="es" title="Español">Español</a>
+    </nav>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="application.html" class="active">Solicitud</a>
+      <a href="contact.html">Contáctanos</a>
+      <a href="past/">Cohortes anteriores</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Solicitud</h2>
+      <p>Gracias por su interés en STARS@SLU. Complete la solicitud en línea y envíe cualquier documento requerido.</p>
+      <ul>
+        <li><a href="../docs/ApplicationForm.pdf" target="_blank">Formulario de Solicitud (PDF)</a> — descargue y envíe según las instrucciones</li>
+        <li>Fecha límite: <strong>[insertar fecha]</strong></li>
+      </ul>
+
+      <h3>Requisitos</h3>
+      <ul>
+        <li>Ser estudiante de penúltimo o último año de preparatoria/bachillerato en el área de St. Louis</li>
+        <li>Disponibilidad para el programa de dos semanas</li>
+        <li>Interés en ciencia de datos y curiosidad por aprender</li>
+      </ul>
+
+      <p>Si necesita ayuda con la solicitud en español, contacte con: <a href="mailto:your-email@slu.edu">your-email@slu.edu</a></p>
+    </section>
+  </main>
+
+  <footer>&copy; STARS@SLU</footer>
+
+  <script src="../lang-switch.js"></script>
 </body>
 </html>
